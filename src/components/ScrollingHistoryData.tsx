@@ -39,22 +39,25 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
   const renderCard = (price: StockPrice) => {
     const changeNum = parseFloat(price.change);
     const isPositive = changeNum >= 0;
-    const changeColor = isPositive ? 'text-red-600' : 'text-green-600';
-    const borderColor = isPositive ? 'border-red-200' : 'border-green-200';
+    const changeColor = isPositive ? 'text-stock-up' : 'text-stock-down';
 
     return (
       <div
-        className={`rounded-2xl border-2 ${borderColor} p-4 shadow-sm`}
-        style={{ backgroundColor: '#fef9f5' }}
+        className="rounded-2xl p-4"
+        style={{
+          border: '2px solid rgba(255, 255, 255, 0.3)',
+          backdropFilter: 'blur(8px)',
+          backgroundColor: 'transparent'
+        }}
       >
         <div className="flex justify-center mb-3">
-          <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
+          <div className="bg-gradient-to-r from-gold-600 to-gold-500 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
             株-{price.code || stockName} {price.date}
           </div>
         </div>
 
-        <div className={`rounded-xl border-2 ${borderColor} p-3 text-center`}>
-          <div className="text-sm text-gray-600">
+        <div className="rounded-xl p-3 text-center" style={{ border: '2px solid rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(5px)' }}>
+          <div className="text-sm text-white">
             前日比：<span className={`font-bold ${changeColor}`}>{formatChange(price.change, price.changePercent)}</span>
           </div>
         </div>
@@ -74,10 +77,10 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
         </div>
 
         <div className="mt-3 text-center">
-          <p className="text-xs text-blue-900">
+          <p className="text-xs text-white">
             データ出典: 公開市場情報 | 更新: 準リアルタイム
           </p>
-          <p className="text-xs text-blue-900 mt-1">
+          <p className="text-xs text-white mt-1">
             ※過去のデータは将来の結果を保証するものではありません
           </p>
         </div>
