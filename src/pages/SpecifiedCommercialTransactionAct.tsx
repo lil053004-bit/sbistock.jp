@@ -36,15 +36,22 @@ export default function SpecifiedCommercialTransactionAct() {
                   <dl className="space-y-3">
                     <div className="grid sm:grid-cols-3 gap-2">
                       <dt className="font-semibold text-gray-900">販売業者名</dt>
-                      <dd className="sm:col-span-2 text-gray-700">株式会社メディアエクシード<br />Media Exceed Co., Ltd.</dd>
+                      <dd className="sm:col-span-2 text-gray-700">アユダンテ株式会社<br />Ayudante, Inc.</dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
                       <dt className="font-semibold text-gray-900">所在地</dt>
                       <dd className="sm:col-span-2 text-gray-700">
-                         〒060‑0061<br />
-                         北海道札幌市中央区南1条西2丁目5 南一条Kビル4F<br />
-                         2-5 Minami 1-jo Nishi, Chuo-ku, Sapporo, Hokkaido 060‑0061
+                         〒102-0083<br />
+                         東京都千代田区麹町2-2-4 麹町セントラルビル6F
                       </dd>
+                    </div>
+                    <div className="grid sm:grid-cols-3 gap-2">
+                      <dt className="font-semibold text-gray-900">設立</dt>
+                      <dd className="sm:col-span-2 text-gray-700">2006年2月28日</dd>
+                    </div>
+                    <div className="grid sm:grid-cols-3 gap-2">
+                      <dt className="font-semibold text-gray-900">業種</dt>
+                      <dd className="sm:col-span-2 text-gray-700">デジタルマーケティング／広告運用コンサルティング／データ分析</dd>
                     </div>
                   </dl>
                 </div>
@@ -60,16 +67,8 @@ export default function SpecifiedCommercialTransactionAct() {
                   <h2 className="text-xl font-bold text-gray-900 mb-4">連絡先</h2>
                   <dl className="space-y-3">
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">代表者</dt>
-                      <dd className="sm:col-span-2 text-gray-700">岩瀬朗 (Akira Iwase)</dd>
-                    </div>
-                    <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">電話番号</dt>
-                      <dd className="sm:col-span-2 text-gray-700">011‑596‑0130</dd>
-                    </div>
-                    <div className="grid sm:grid-cols-3 gap-2">
                       <dt className="font-semibold text-gray-900">メールアドレス</dt>
-                      <dd className="sm:col-span-2 text-blue-600">support@stock-jp.jp</dd>
+                      <dd className="sm:col-span-2 text-blue-600">support@sbistock.jp</dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
                       <dt className="font-semibold text-gray-900">受付時間</dt>
@@ -234,18 +233,12 @@ export default function SpecifiedCommercialTransactionAct() {
                   特定商取引法に関するご質問、その他お問い合わせは、
                   以下の方法でご連絡ください。
                 </p>
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-3 mb-4">
                   <Mail className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">メール</p>
-                    <p className="text-blue-600">support@stock-jp.jp</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3 mb-4">
-                  <Phone className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900 mb-1">電話</p>
-                    <p className="text-gray-700">011‑596‑0130（平日 9:00 - 18:00）</p>
+                    <p className="text-blue-600">support@sbistock.jp</p>
+                    <p className="text-sm text-gray-600 mt-1">受付時間: 平日 9:00 - 18:00</p>
                   </div>
                 </div>
                 <Link

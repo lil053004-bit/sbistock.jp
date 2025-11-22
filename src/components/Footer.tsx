@@ -76,12 +76,8 @@ export default function Footer() {
             よくある質問 <ExternalLink className="w-3 h-3" />
             </Link>
           </li>
-          <li className="flex items-center gap-1 mt-3 text-white">
-            <Phone className="w-3 h-3" />
-            <span>03-5211-2632</span>
-          </li>
           <li className="text-white">
-            support@perfectstocks.jp
+            support@sbistock.jp
           </li>
           <li className="text-xs text-white">
             受付時間: 平日 9:00-18:00
@@ -94,7 +90,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="border-t border-gold-400/20 pt-4 text-center">
         <p className="text-xs sm:text-sm mb-2 font-medium text-white">
-          &copy; {currentYear} 株式会社集英社インターナショナル. All rights reserved.
+          &copy; {currentYear} アユダンテ株式会社（Ayudante, Inc.）. All rights reserved.
         </p>
         <p className="text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto text-white">
           当サイトで提供される情報は投資勧誘を目的としたものではありません。
