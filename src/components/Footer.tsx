@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-20 border-t-2 border-blue-500/30 mt-0 bg-[#f2e3c0]">
+    <footer className="relative z-20 border-t-2 border-gold-400/30 mt-0 bg-neutral-100">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-6">
       {/* Footer Links Section */}
       <div className="pt-0">
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-6">
         {/* Legal Documents */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm" style={{ color: '#5c5c5c' }}>
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-primary">
           <FileText className="w-4 h-4" />
           法的文書
           </h4>
@@ -21,8 +21,7 @@ export default function Footer() {
           <li>
             <Link
             to="/terms"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             利用規約 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -30,8 +29,7 @@ export default function Footer() {
           <li>
             <Link
             to="/privacy"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             プライバシーポリシー <ExternalLink className="w-3 h-3" />
             </Link>
@@ -39,8 +37,7 @@ export default function Footer() {
           <li>
             <Link
             to="/disclaimer"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             免責事項 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -48,8 +45,7 @@ export default function Footer() {
           <li>
             <Link
             to="/specified-commercial-transaction-act"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             特定商取引法表記 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -59,7 +55,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm" style={{ color: '#5c5c5c' }}>
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-primary">
           <Mail className="w-4 h-4" />
           お問い合わせ
           </h4>
@@ -67,8 +63,7 @@ export default function Footer() {
           <li>
             <Link
             to="/contact"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             お問い合わせフォーム <ExternalLink className="w-3 h-3" />
             </Link>
@@ -76,8 +71,7 @@ export default function Footer() {
           <li>
             <Link
             to="/faq"
-            className="hover:underline flex items-center gap-1"
-            style={{ color: '#5c5c5c' }}
+            className="hover:underline flex items-center gap-1 text-text-secondary"
             >
             よくある質問 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -98,11 +92,11 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-blue-500/20 pt-4 text-center">
-        <p className="text-xs sm:text-sm mb-2 font-medium" style={{ color: '#5c5c5c' }}>
+        <div className="border-t border-gold-400/20 pt-4 text-center">
+        <p className="text-xs sm:text-sm mb-2 font-medium text-text-primary">
           &copy; {currentYear} 株式会社集英社インターナショナル. All rights reserved.
         </p>
-        <p className="text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto" style={{ color: '#5c5c5c' }}>
+        <p className="text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto text-text-secondary">
           当サイトで提供される情報は投資勧誘を目的としたものではありません。
           投資に関する最終決定は、利用者ご自身の判断でなさるようお願いいたします。
           掲載されている情報の正確性については万全を期しておりますが、その内容の正確性、安全性、有用性を保証するものではありません。

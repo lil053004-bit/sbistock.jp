@@ -9,31 +9,31 @@ export default function ServicesInfoCard() {
   return (
     <div className="px-4 py-3">
       <div className="max-w-lg mx-auto">
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative rounded-2xl overflow-hidden shadow-card-lg">
           <div
             className="absolute inset-0"
             style={{
               background: `
                 linear-gradient(135deg,
-                  rgba(59, 130, 246, 0.95) 0%,
-                  rgba(37, 99, 235, 0.95) 50%,
-                  rgba(29, 78, 216, 0.95) 100%
+                  rgba(30, 58, 95, 0.95) 0%,
+                  rgba(45, 74, 124, 0.95) 50%,
+                  rgba(61, 90, 153, 0.95) 100%
                 )
               `,
-              boxShadow: 'inset 0 2px 4px rgba(255, 255, 255, 0.2)'
+              boxShadow: 'inset 0 2px 4px rgba(251, 191, 36, 0.15)'
             }}
           />
 
           <div
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-15"
             style={{
               backgroundImage: `
                 repeating-linear-gradient(
                   90deg,
                   transparent,
                   transparent 15px,
-                  rgba(255, 255, 255, 0.1) 15px,
-                  rgba(255, 255, 255, 0.1) 30px
+                  rgba(251, 191, 36, 0.1) 15px,
+                  rgba(251, 191, 36, 0.1) 30px
                 )
               `
             }}

@@ -8,17 +8,17 @@ interface SplitStockCardProps {
 export default function SplitStockCard({ info, latestPrice }: SplitStockCardProps) {
   const changeNum = parseFloat(info.change);
   const isPositive = changeNum >= 0;
-  const changeColor = isPositive ? 'text-red-600' : 'text-green-600';
-  const arrowColor = isPositive ? '#ef4444' : '#22c55e';
-  const chartColor = isPositive ? '#ef4444' : '#22c55e';
+  const changeColor = isPositive ? 'text-stock-up' : 'text-stock-down';
+  const arrowColor = isPositive ? '#dc2626' : '#16a34a';
+  const chartColor = isPositive ? '#dc2626' : '#16a34a';
 
   const getValueColor = (current: string, reference: string) => {
     const currentNum = parseFloat(current.replace(/,/g, ''));
     const referenceNum = parseFloat(reference.replace(/,/g, ''));
-    if (isNaN(currentNum) || isNaN(referenceNum)) return 'text-gray-400';
-    if (currentNum > referenceNum) return 'text-red-600';
-    if (currentNum < referenceNum) return 'text-green-600';
-    return 'text-gray-400';
+    if (isNaN(currentNum) || isNaN(referenceNum)) return 'text-neutral-700';
+    if (currentNum > referenceNum) return 'text-stock-up';
+    if (currentNum < referenceNum) return 'text-stock-down';
+    return 'text-neutral-700';
   };
 
   return (
@@ -27,7 +27,7 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
         <div className="px-2 py-0">
             <div className="flex gap-3">
               <div className="flex-1" style={{ width: '50%' }}>
-                <div className="text-lg text-red-900 font-bold mb-1 whitespace-nowrap">
+                <div className="text-lg text-navy-800 font-bold mb-1 whitespace-nowrap">
                   {info.name} ({info.code}) {latestPrice?.date || info.timestamp}
                 </div>
                 <div className="flex items-baseline gap-2 mb-3">
@@ -38,36 +38,36 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
 
                 <div className="grid grid-cols-2 gap-x-2 gap-y-2 text-sm">
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{info.change}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">前日比較</span>
+                    <span className="text-stock-up font-semibold">{info.change}</span>
+                    <span className="text-text-secondary text-xs">前日比較</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{latestPrice?.high || info.price}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">高値</span>
+                    <span className="text-stock-up font-semibold">{latestPrice?.high || info.price}</span>
+                    <span className="text-text-secondary text-xs">高値</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{latestPrice?.open || info.price}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">始値</span>
+                    <span className="text-stock-up font-semibold">{latestPrice?.open || info.price}</span>
+                    <span className="text-text-secondary text-xs">始値</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{latestPrice?.low || info.price}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">安値</span>
+                    <span className="text-stock-up font-semibold">{latestPrice?.low || info.price}</span>
+                    <span className="text-text-secondary text-xs">安値</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{latestPrice?.close || info.price}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">終値</span>
+                    <span className="text-stock-up font-semibold">{latestPrice?.close || info.price}</span>
+                    <span className="text-text-secondary text-xs">終値</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{info.per}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">PER</span>
+                    <span className="text-stock-up font-semibold">{info.per}</span>
+                    <span className="text-text-secondary text-xs">PER</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{latestPrice?.volume || 'N/A'}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">前日取引</span>
+                    <span className="text-stock-up font-semibold">{latestPrice?.volume || 'N/A'}</span>
+                    <span className="text-text-secondary text-xs">前日取引</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-red-600 font-semibold">{info.dividend}</span>
-                    <span style={{ color: '#384860' }} className="text-xs">配当利回り</span>
+                    <span className="text-stock-up font-semibold">{info.dividend}</span>
+                    <span className="text-text-secondary text-xs">配当利回り</span>
                   </div>
                 </div>
               </div>
