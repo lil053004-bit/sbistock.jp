@@ -40,7 +40,7 @@ export default function ServicesInfoCard() {
           />
 
           <div className="relative p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-primary text-center mb-6 drop-shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-bold text-white text-center mb-6 drop-shadow-lg">
               提供サービス一覧
             </h3>
 
@@ -54,10 +54,10 @@ export default function ServicesInfoCard() {
                     {service.icon}
                   </div>
                   <div className="text-center">
-                    <div className="text-primary font-bold text-sm sm:text-base">
+                    <div className="text-white font-bold text-sm sm:text-base">
                       {service.title}
                     </div>
-                    <div className="text-primary/90 text-xs sm:text-sm">
+                    <div className="text-white/90 text-xs sm:text-sm">
                       {service.subtitle}
                     </div>
                   </div>

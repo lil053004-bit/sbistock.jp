@@ -53,7 +53,7 @@ export default function PulsingButton({ onClick, stockName = '', disabled = fals
             />
             <div className="absolute inset-0 border-2 border-green-light/40 rounded-2xl pointer-events-none" />
             <div className="relative flex items-center justify-center px-8 z-10">
-              <span className="font-bold text-base sm:text-lg text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+              <span className="font-bold text-base sm:text-lg text-primary drop-shadow-[0_2px_4px_rgba(255,255,255,0.5)]">
                 {buttonText}
               </span>
             </div>

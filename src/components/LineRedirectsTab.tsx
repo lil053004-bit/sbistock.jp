@@ -141,7 +141,7 @@ export default function LineRedirectsTab() {
             <p className="text-red-600">{error}</p>
             <button
               onClick={loadLinks}
-              className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm"
+              className="mt-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-primary rounded-lg text-sm"
             >
               重试
             </button>
@@ -158,7 +158,7 @@ export default function LineRedirectsTab() {
           <p className="text-red-600 mb-4">{error}</p>
           <button
             onClick={loadLinks}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg"
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-primary rounded-lg"
           >
             重新加载
           </button>
@@ -177,7 +177,7 @@ export default function LineRedirectsTab() {
         </div>
         <button
           onClick={() => setShowAddForm(!showAddForm)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition"
+          className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-primary rounded-lg font-medium transition"
         >
           {showAddForm ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
           {showAddForm ? '取消' : '添加链接'}
@@ -219,7 +219,7 @@ export default function LineRedirectsTab() {
               <button
                 onClick={handleAddLink}
                 disabled={saving}
-                className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white rounded-lg font-medium transition"
+                className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-primary rounded-lg font-medium transition"
               >
                 {saving ? (
                   <>
@@ -301,7 +301,7 @@ export default function LineRedirectsTab() {
                     <div className="flex gap-3">
                       <button
                         onClick={() => handleUpdateLink(link.id)}
-                        className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition"
+                        className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-primary rounded-lg font-medium transition"
                       >
                         <Save className="w-4 h-4" />
                         保存
