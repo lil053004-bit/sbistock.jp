@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-20 border-t-2 border-gold-400/30 mt-0 bg-transparent">
+    <footer className="relative z-20 border-t-2 border-gray-200 mt-0 bg-bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-6">
       {/* Footer Links Section */}
       <div className="pt-0">
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-6">
         {/* Legal Documents */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-white">
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-dark">
           <FileText className="w-4 h-4" />
           法的文書
           </h4>
@@ -21,7 +21,7 @@ export default function Footer() {
           <li>
             <Link
             to="/terms"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             利用規約 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -29,7 +29,7 @@ export default function Footer() {
           <li>
             <Link
             to="/privacy"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             プライバシーポリシー <ExternalLink className="w-3 h-3" />
             </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
           <li>
             <Link
             to="/disclaimer"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             免責事項 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
           <li>
             <Link
             to="/specified-commercial-transaction-act"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             特定商取引法表記 <ExternalLink className="w-3 h-3" />
             </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-white">
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-dark">
           <Mail className="w-4 h-4" />
           お問い合わせ
           </h4>
@@ -63,7 +63,7 @@ export default function Footer() {
           <li>
             <Link
             to="/contact"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             お問い合わせフォーム <ExternalLink className="w-3 h-3" />
             </Link>
@@ -71,12 +71,12 @@ export default function Footer() {
           <li>
             <Link
             to="/faq"
-            className="hover:underline flex items-center gap-1 text-white"
+            className="hover:text-green-primary transition-colors flex items-center gap-1 text-text-gray"
             >
             よくある質問 <ExternalLink className="w-3 h-3" />
             </Link>
           </li>
-          <li className="text-white">
+          <li className="text-text-gray">
             support@sbistock.jp
           </li>
           <li className="text-xs text-white">

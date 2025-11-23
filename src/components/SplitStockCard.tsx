@@ -27,7 +27,7 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
         <div className="px-2 py-0">
             <div className="flex gap-3">
               <div className="flex-1" style={{ width: '50%' }}>
-                <div className="text-lg text-white font-bold mb-1 whitespace-nowrap">
+                <div className="text-lg text-text-dark font-bold mb-1 whitespace-nowrap">
                   {info.name} ({info.code}) {latestPrice?.date || info.timestamp}
                 </div>
                 <div className="flex items-baseline gap-2 mb-3">
@@ -39,35 +39,35 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
                 <div className="grid grid-cols-2 gap-x-2 gap-y-2 text-sm">
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{info.change}</span>
-                    <span className="text-white text-xs">前日比較</span>
+                    <span className="text-text-gray text-xs">前日比較</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{latestPrice?.high || info.price}</span>
-                    <span className="text-white text-xs">高値</span>
+                    <span className="text-text-gray text-xs">高値</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{latestPrice?.open || info.price}</span>
-                    <span className="text-white text-xs">始値</span>
+                    <span className="text-text-gray text-xs">始値</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{latestPrice?.low || info.price}</span>
-                    <span className="text-white text-xs">安値</span>
+                    <span className="text-text-gray text-xs">安値</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{latestPrice?.close || info.price}</span>
-                    <span className="text-white text-xs">終値</span>
+                    <span className="text-text-gray text-xs">終値</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{info.per}</span>
-                    <span className="text-white text-xs">PER</span>
+                    <span className="text-text-gray text-xs">PER</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{latestPrice?.volume || 'N/A'}</span>
-                    <span className="text-white text-xs">前日取引</span>
+                    <span className="text-text-gray text-xs">前日取引</span>
                   </div>
                   <div className="flex flex-col">
                     <span className="text-stock-up font-semibold">{info.dividend}</span>
-                    <span className="text-white text-xs">配当利回り</span>
+                    <span className="text-text-gray text-xs">配当利回り</span>
                   </div>
                 </div>
               </div>
@@ -121,10 +121,10 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
                     </>
                   )}
 
-                  <rect x="10" y="73" width="8" height="5" fill="#fbbf24" />
-                  <rect x="25" y="70" width="8" height="8" fill="#fbbf24" />
-                  <rect x="40" y="68" width="8" height="10" fill="#fb923c" />
-                  <rect x="55" y="65" width="8" height="13" fill="#f97316" />
+                  <rect x="10" y="73" width="8" height="5" fill="#3DD598" />
+                  <rect x="25" y="70" width="8" height="8" fill="#3DD598" />
+                  <rect x="40" y="68" width="8" height="10" fill="#4ADE80" />
+                  <rect x="55" y="65" width="8" height="13" fill="#4ADE80" />
                 </svg>
               </div>
             </div>

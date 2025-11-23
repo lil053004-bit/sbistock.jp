@@ -4,21 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Brand Colors - Navy Blue
-        'navy-950': '#0a1628',
-        'navy-900': '#0f1e3a',
-        'navy-800': '#1a2841',
-        'navy-700': '#1e3a5f',
-        'navy-600': '#2d4a7c',
-        'navy-500': '#3d5a99',
+        // Primary Theme - Light Green
+        'green-primary': '#3DD598',
+        'green-light': '#4ADE80',
+        'green-dark': '#059669',
+        'green-50': '#F0FDF4',
+        'green-100': '#DCFCE7',
+        'green-200': '#BBF7D0',
 
-        // Secondary Accent - Gold/Bronze
-        'gold-600': '#d97706',
-        'gold-500': '#f59e0b',
-        'gold-400': '#fbbf24',
-        'gold-300': '#fcd34d',
+        // Dark Blue - Only for specific card areas
+        'dark-blue': '#0A2540',
+        'dark-blue-light': '#1E3A5F',
+        'dark-blue-card': '#0F2942',
 
-        // Neutral Backgrounds
+        // White Background System
+        'bg-white': '#FFFFFF',
+        'bg-gray-50': '#F9FAFB',
+        'bg-gray-100': '#F3F4F6',
+        'bg-gray-200': '#E5E7EB',
+
+        // Text Colors
+        'text-dark': '#111827',
+        'text-gray': '#6B7280',
+        'text-light-gray': '#9CA3AF',
+        'text-slate': '#475569',
+
+        // Neutral Colors
         'neutral-50': '#f8f9fa',
         'neutral-100': '#e9ecef',
         'neutral-200': '#dee2e6',
@@ -33,26 +44,38 @@ export default {
         'warning': '#d97706',
         'error': '#dc2626',
 
-        // Utility Colors
-        'accent-primary': '#2563eb',  // Professional blue for CTAs
-        'accent-secondary': '#0891b2', // Teal for secondary actions
-        'text-primary': '#1f2937',
-        'text-secondary': '#4b5563',
-        'text-tertiary': '#6b7280',
+        // Legacy colors for compatibility
+        'navy-950': '#0a1628',
+        'navy-900': '#0f1e3a',
+        'navy-800': '#1a2841',
+        'navy-700': '#1e3a5f',
+        'navy-600': '#2d4a7c',
+        'navy-500': '#3d5a99',
+        'gold-600': '#d97706',
+        'gold-500': '#f59e0b',
+        'gold-400': '#fbbf24',
+        'gold-300': '#fcd34d',
+        'accent-primary': '#3DD598',
+        'accent-secondary': '#4ADE80',
+        'text-primary': '#111827',
+        'text-secondary': '#6b7280',
+        'text-tertiary': '#9ca3af',
       },
       backgroundImage: {
-        'navy-gradient': 'linear-gradient(135deg, #0a1628 0%, #1a2841 50%, #2d4a7c 100%)',
-        'navy-subtle': 'linear-gradient(to bottom, #1a2841, #2d4a7c)',
-        'gold-gradient': 'linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%)',
+        'green-gradient': 'linear-gradient(135deg, #3DD598 0%, #4ADE80 50%, #3DD598 100%)',
+        'green-subtle': 'linear-gradient(to bottom, #3DD598, #4ADE80)',
+        'dark-blue-gradient': 'linear-gradient(135deg, #0A2540 0%, #1E3A5F 100%)',
+        'white-gradient': 'linear-gradient(to bottom, #FFFFFF, #F9FAFB)',
+        'gray-gradient': 'linear-gradient(to bottom, #F9FAFB, #F3F4F6)',
         'neutral-gradient': 'linear-gradient(to bottom, #f8f9fa, #e9ecef)',
-        'accent-gradient': 'linear-gradient(135deg, #2563eb 0%, #3b82f6 100%)',
       },
       boxShadow: {
-        'card-sm': '0 2px 8px rgba(10, 22, 40, 0.1)',
-        'card-md': '0 4px 16px rgba(10, 22, 40, 0.15)',
-        'card-lg': '0 8px 32px rgba(10, 22, 40, 0.2)',
-        'gold-subtle': '0 4px 20px rgba(217, 119, 6, 0.15)',
-        'accent-subtle': '0 4px 20px rgba(37, 99, 235, 0.15)',
+        'card-sm': '0 2px 8px rgba(0, 0, 0, 0.08)',
+        'card-md': '0 4px 16px rgba(0, 0, 0, 0.1)',
+        'card-lg': '0 8px 32px rgba(0, 0, 0, 0.12)',
+        'green-subtle': '0 4px 20px rgba(61, 213, 152, 0.25)',
+        'green-glow': '0 0 20px rgba(61, 213, 152, 0.3)',
+        'dark-blue-subtle': '0 4px 20px rgba(10, 37, 64, 0.15)',
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',

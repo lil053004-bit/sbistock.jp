@@ -30,7 +30,7 @@ const formatAnalysisText = (text: string): JSX.Element[] => {
         parts.push(cleanLine.substring(lastIndex, match.index));
       }
       parts.push(
-        <span key={`${index}-${match.index}`} className="text-gold-600 font-semibold text-lg">
+        <span key={`${index}-${match.index}`} className="text-green-primary font-semibold text-lg">
           {match[0]}
         </span>
       );

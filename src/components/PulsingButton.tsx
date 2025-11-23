@@ -25,15 +25,15 @@ export default function PulsingButton({ onClick, stockName = '', disabled = fals
               style={{
                 background: `
                   linear-gradient(135deg,
-                    #d97706 0%,
-                    #f59e0b 50%,
-                    #fbbf24 100%
+                    #3DD598 0%,
+                    #4ADE80 50%,
+                    #3DD598 100%
                   )
                 `,
                 boxShadow: `
-                  0 4px 20px rgba(217, 119, 6, 0.3),
-                  inset 0 2px 4px rgba(255, 255, 255, 0.15),
-                  inset 0 -2px 4px rgba(10, 22, 40, 0.2)
+                  0 4px 20px rgba(61, 213, 152, 0.4),
+                  inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                  inset 0 -2px 4px rgba(5, 150, 105, 0.3)
                 `
               }}
             />
@@ -51,9 +51,9 @@ export default function PulsingButton({ onClick, stockName = '', disabled = fals
                 `
               }}
             />
-            <div className="absolute inset-0 border-2 border-gold-300/40 rounded-2xl pointer-events-none" />
+            <div className="absolute inset-0 border-2 border-green-light/40 rounded-2xl pointer-events-none" />
             <div className="relative flex items-center justify-center px-8 z-10">
-              <span className="font-bold text-base sm:text-lg text-navy-950 drop-shadow-[0_1px_2px_rgba(255,255,255,0.3)]">
+              <span className="font-bold text-base sm:text-lg text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
                 {buttonText}
               </span>
             </div>

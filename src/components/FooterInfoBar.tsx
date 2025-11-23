@@ -15,13 +15,13 @@ export default function FooterInfoBar() {
             style={{
               background: `
                 linear-gradient(135deg,
-                  rgba(34, 197, 94, 0.95) 0%,
-                  rgba(22, 163, 74, 0.95) 50%,
-                  rgba(21, 128, 61, 0.95) 100%
+                  #3DD598 0%,
+                  #4ADE80 50%,
+                  #3DD598 100%
                 )
               `,
               boxShadow: `
-                0 4px 20px rgba(34, 197, 94, 0.4),
+                0 4px 20px rgba(61, 213, 152, 0.4),
                 inset 0 1px 2px rgba(255, 255, 255, 0.2),
                 inset 0 -1px 2px rgba(0, 0, 0, 0.2)
               `

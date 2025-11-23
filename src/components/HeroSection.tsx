@@ -18,7 +18,7 @@ export default function HeroSection({ stockCode = '----', stockName = '', onDiag
                 className="font-bold"
                 style={{
                   fontSize: '3rem',
-                  color: '#f59e0b',
+                  color: '#3DD598',
                   fontFamily: "'Kozuka Gothic Pr6N', 'Noto Sans JP', sans-serif"
                 }}
               >
@@ -28,9 +28,8 @@ export default function HeroSection({ stockCode = '----', stockName = '', onDiag
                 className="font-bold"
                 style={{
                   fontSize: '2rem',
-                  color: '#e9ecef',
-                  fontFamily: "'Kozuka Gothic Pr6N', 'Noto Sans JP', sans-serif",
-                  textShadow: '2px 2px 8px rgba(10, 22, 40, 0.6)'
+                  color: '#111827',
+                  fontFamily: "'Kozuka Gothic Pr6N', 'Noto Sans JP', sans-serif"
                 }}
               >
                 銘柄基本
@@ -43,9 +42,8 @@ export default function HeroSection({ stockCode = '----', stockName = '', onDiag
               className="font-bold whitespace-nowrap"
               style={{
                 fontFamily: "'HYYaKuHeiW', 'Kozuka Gothic Pr6N', 'Noto Sans JP', sans-serif",
-                color: '#fbbf24',
-                fontSize: '3rem',
-                textShadow: '3px 3px 0 #0a1628, -1px -1px 0 #0a1628, 1px -1px 0 #0a1628, -1px 1px 0 #0a1628, 2px 2px 8px rgba(217, 119, 6, 0.4)'
+                color: '#111827',
+                fontSize: '3rem'
               }}
             >
               銘柄無料診断

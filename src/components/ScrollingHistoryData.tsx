@@ -51,7 +51,7 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
         }}
       >
         <div className="flex justify-center mb-3">
-          <div className="bg-gradient-to-r from-gold-600 to-gold-500 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
+          <div className="bg-gradient-to-r from-green-primary to-green-light text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
             株-{price.code || stockName} {price.date}
           </div>
         </div>
