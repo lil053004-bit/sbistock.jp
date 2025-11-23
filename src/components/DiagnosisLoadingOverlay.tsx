@@ -72,7 +72,7 @@ export default function DiagnosisLoadingOverlay({
 
           <div className="relative">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-text-dark mb-2 text-center">市場データ分析中</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2 text-center">市場データ分析中</h3>
               <p className="text-sm font-semibold text-text-gray text-center">参考情報を生成しています...</p>
             </div>
 
@@ -96,7 +96,7 @@ export default function DiagnosisLoadingOverlay({
 
             <div className="bg-gradient-to-br from-neutral-50 to-neutral-100 border-3 border-green-primary/20 rounded-xl p-6 shadow-lg">
               <div className="space-y-3 text-sm">
-                <p className="text-text-dark font-bold text-center text-base">
+                <p className="text-primary font-bold text-center text-base">
                   AIによる情報分析中（参考資料作成）
                 </p>
                 <p className="text-text-gray font-semibold text-center">

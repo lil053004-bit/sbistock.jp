@@ -28,7 +28,7 @@ export default function HeroSection({ stockCode = '----', stockName = '', onDiag
                 className="font-bold"
                 style={{
                   fontSize: '2rem',
-                  color: '#111827',
+                  color: '#03142d',
                   fontFamily: "'Kozuka Gothic Pr6N', 'Noto Sans JP', sans-serif"
                 }}
               >

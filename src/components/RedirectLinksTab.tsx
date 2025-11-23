@@ -18,7 +18,7 @@ const URL_TYPES = [
   { value: 'line', label: 'LINE', color: 'bg-green-100 text-green-700' },
   { value: 'website', label: 'Website', color: 'bg-blue-100 text-blue-700' },
   { value: 'social', label: 'Social Media', color: 'bg-purple-100 text-purple-700' },
-  { value: 'general', label: 'General', color: 'bg-slate-100 text-slate-700' },
+  { value: 'general', label: 'General', color: 'bg-slate-100 text-primary' },
 ];
 
 export default function RedirectLinksTab() {
@@ -206,7 +206,7 @@ export default function RedirectLinksTab() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900">分流链接管理</h2>
+          <h2 className="text-2xl font-bold text-primary">分流链接管理</h2>
           <p className="text-sm text-slate-600 mt-1">创建和管理多个跳转链接，系统将根据权重自动分配流量</p>
         </div>
         <button
@@ -220,10 +220,10 @@ export default function RedirectLinksTab() {
 
       {showAddForm && (
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-900 mb-4">添加新的跳转链接</h3>
+          <h3 className="font-bold text-primary mb-4">添加新的跳转链接</h3>
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 跳转URL <span className="text-red-500">*</span>
               </label>
               <input
@@ -231,11 +231,11 @@ export default function RedirectLinksTab() {
                 value={newLink.redirect_url}
                 onChange={(e) => setNewLink({ ...newLink, redirect_url: e.target.value })}
                 placeholder="https://example.com 或 https://line.me/R/ti/p/@example"
-                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
+                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 标签（可选）
               </label>
               <input
@@ -243,17 +243,17 @@ export default function RedirectLinksTab() {
                 value={newLink.label}
                 onChange={(e) => setNewLink({ ...newLink, label: e.target.value })}
                 placeholder="为链接添加描述性标签"
-                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
+                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-primary"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 链接类型
               </label>
               <select
                 value={newLink.url_type}
                 onChange={(e) => setNewLink({ ...newLink, url_type: e.target.value })}
-                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
+                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-primary"
               >
                 {URL_TYPES.map(type => (
                   <option key={type.value} value={type.value}>{type.label}</option>
@@ -261,7 +261,7 @@ export default function RedirectLinksTab() {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 权重 (1-100) <span className="text-red-500">*</span>
               </label>
               <input
@@ -270,7 +270,7 @@ export default function RedirectLinksTab() {
                 max="100"
                 value={newLink.weight}
                 onChange={(e) => setNewLink({ ...newLink, weight: parseInt(e.target.value) || 1 })}
-                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
+                className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-primary"
               />
               <p className="text-xs text-slate-500 mt-1">权重越高，被选中的概率越大</p>
             </div>
@@ -297,7 +297,7 @@ export default function RedirectLinksTab() {
                   setShowAddForm(false);
                   setNewLink({ redirect_url: '', weight: 50, label: '', url_type: 'general' });
                 }}
-                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg font-medium transition"
+                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-primary rounded-lg font-medium transition"
               >
                 取消
               </button>
@@ -309,7 +309,7 @@ export default function RedirectLinksTab() {
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-sm border border-blue-200 p-6">
         <div className="flex items-center gap-2 mb-3">
           <BarChart3 className="w-5 h-5 text-blue-600" />
-          <h3 className="font-bold text-slate-900">权重分布</h3>
+          <h3 className="font-bold text-primary">权重分布</h3>
         </div>
         <div className="text-2xl font-bold text-blue-600 mb-2">总权重: {totalWeight}</div>
         <p className="text-sm text-slate-600">
@@ -336,29 +336,29 @@ export default function RedirectLinksTab() {
                 <div className="p-6">
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">跳转URL</label>
+                      <label className="block text-sm font-medium text-primary mb-2">跳转URL</label>
                       <input
                         type="text"
                         value={editForm.redirect_url}
                         onChange={(e) => setEditForm({ ...editForm, redirect_url: e.target.value })}
-                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-slate-900"
+                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-primary"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">标签</label>
+                      <label className="block text-sm font-medium text-primary mb-2">标签</label>
                       <input
                         type="text"
                         value={editForm.label}
                         onChange={(e) => setEditForm({ ...editForm, label: e.target.value })}
-                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-slate-900"
+                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-primary"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">链接类型</label>
+                      <label className="block text-sm font-medium text-primary mb-2">链接类型</label>
                       <select
                         value={editForm.url_type}
                         onChange={(e) => setEditForm({ ...editForm, url_type: e.target.value })}
-                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-slate-900"
+                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-primary"
                       >
                         {URL_TYPES.map(type => (
                           <option key={type.value} value={type.value}>{type.label}</option>
@@ -366,14 +366,14 @@ export default function RedirectLinksTab() {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">权重</label>
+                      <label className="block text-sm font-medium text-primary mb-2">权重</label>
                       <input
                         type="number"
                         min="1"
                         max="100"
                         value={editForm.weight}
                         onChange={(e) => setEditForm({ ...editForm, weight: parseInt(e.target.value) || 1 })}
-                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-slate-900"
+                        className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-primary"
                       />
                     </div>
                     <div className="flex gap-3">
@@ -386,7 +386,7 @@ export default function RedirectLinksTab() {
                       </button>
                       <button
                         onClick={() => setEditingId(null)}
-                        className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg font-medium transition"
+                        className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-primary rounded-lg font-medium transition"
                       >
                         取消
                       </button>
@@ -400,7 +400,7 @@ export default function RedirectLinksTab() {
                       <div className="flex items-center gap-3 mb-2">
                         <Link2 className={`w-5 h-5 ${link.is_active ? 'text-blue-600' : 'text-slate-400'}`} />
                         {link.label && (
-                          <span className="flex items-center gap-1 text-sm font-medium text-slate-700">
+                          <span className="flex items-center gap-1 text-sm font-medium text-primary">
                             <Tag className="w-3 h-3" />
                             {link.label}
                           </span>
@@ -419,11 +419,11 @@ export default function RedirectLinksTab() {
                       <div className="flex items-center gap-4 text-sm text-slate-600 ml-8 mt-2">
                         <div>
                           <span className="font-medium">权重:</span>{' '}
-                          <span className="font-bold text-slate-900">{link.weight}</span>
+                          <span className="font-bold text-primary">{link.weight}</span>
                         </div>
                         <div>
                           <span className="font-medium">命中次数:</span>{' '}
-                          <span className="font-bold text-slate-900">{link.hit_count}</span>
+                          <span className="font-bold text-primary">{link.hit_count}</span>
                         </div>
                         {totalWeight > 0 && link.is_active && (
                           <div>

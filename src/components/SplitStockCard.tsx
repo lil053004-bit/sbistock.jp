@@ -27,7 +27,7 @@ export default function SplitStockCard({ info, latestPrice }: SplitStockCardProp
         <div className="px-2 py-0">
             <div className="flex gap-3">
               <div className="flex-1" style={{ width: '50%' }}>
-                <div className="text-lg text-text-dark font-bold mb-1 whitespace-nowrap">
+                <div className="text-lg text-primary font-bold mb-1 whitespace-nowrap">
                   {info.name} ({info.code}) {latestPrice?.date || info.timestamp}
                 </div>
                 <div className="flex items-baseline gap-2 mb-3">

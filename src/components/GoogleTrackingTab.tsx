@@ -82,7 +82,7 @@ export default function GoogleTrackingTab() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h2 className="text-2xl font-bold text-slate-900">Google 追踪配置</h2>
+        <h2 className="text-2xl font-bold text-primary">Google 追踪配置</h2>
         <p className="text-sm text-slate-600 mt-1">配置 Google Ads 和 Google Analytics 4 追踪代码</p>
       </div>
 
@@ -122,7 +122,7 @@ export default function GoogleTrackingTab() {
         <div className="space-y-6">
           {/* Google Ads Conversion ID */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               <div className="flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Google Ads 转化跟踪 ID
@@ -133,7 +133,7 @@ export default function GoogleTrackingTab() {
               value={config.google_ads_conversion_id}
               onChange={(e) => setConfig({ ...config, google_ads_conversion_id: e.target.value })}
               placeholder="AW-XXXXXXXXXX"
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-slate-900"
+              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-primary"
             />
             <p className="text-xs text-slate-500 mt-1">
               格式: AW-XXXXXXXXXX (从 Google Ads 转化跟踪页面获取)
@@ -142,7 +142,7 @@ export default function GoogleTrackingTab() {
 
           {/* GA4 Measurement ID */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               <div className="flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Google Analytics 4 测量 ID
@@ -153,7 +153,7 @@ export default function GoogleTrackingTab() {
               value={config.ga4_measurement_id}
               onChange={(e) => setConfig({ ...config, ga4_measurement_id: e.target.value })}
               placeholder="G-XXXXXXXXXX"
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-slate-900"
+              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-primary"
             />
             <p className="text-xs text-slate-500 mt-1">
               格式: G-XXXXXXXXXX (从 Google Analytics 4 数据流详情获取)
@@ -162,7 +162,7 @@ export default function GoogleTrackingTab() {
 
           {/* Conversion Action ID */}
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label className="block text-sm font-medium text-primary mb-2">
               <div className="flex items-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 转化操作 ID
@@ -173,7 +173,7 @@ export default function GoogleTrackingTab() {
               value={config.conversion_action_id}
               onChange={(e) => setConfig({ ...config, conversion_action_id: e.target.value })}
               placeholder="AW-XXXXXXXXXX/YYYYYYYYYY"
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-slate-900"
+              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-primary"
             />
             <p className="text-xs text-slate-500 mt-1">
               格式: AW-XXXXXXXXXX/YYYYYYYYYY (完整的转化操作 ID)
@@ -189,7 +189,7 @@ export default function GoogleTrackingTab() {
               onChange={(e) => setConfig({ ...config, is_enabled: e.target.checked })}
               className="w-5 h-5 text-blue-600 border-slate-300 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer"
             />
-            <label htmlFor="is_enabled" className="text-sm font-medium text-slate-700 cursor-pointer">
+            <label htmlFor="is_enabled" className="text-sm font-medium text-primary cursor-pointer">
               启用 Google 追踪代码
             </label>
           </div>
@@ -244,24 +244,24 @@ export default function GoogleTrackingTab() {
       {/* Current Configuration Display */}
       {(config.google_ads_conversion_id || config.ga4_measurement_id) && (
         <div className="bg-slate-50 rounded-xl border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-900 mb-4">当前配置</h3>
+          <h3 className="font-bold text-primary mb-4">当前配置</h3>
           <div className="space-y-2 text-sm">
             {config.google_ads_conversion_id && (
               <div className="flex items-start gap-2">
                 <span className="text-slate-600 w-32 flex-shrink-0">Google Ads:</span>
-                <span className="font-mono text-slate-900">{config.google_ads_conversion_id}</span>
+                <span className="font-mono text-primary">{config.google_ads_conversion_id}</span>
               </div>
             )}
             {config.ga4_measurement_id && (
               <div className="flex items-start gap-2">
                 <span className="text-slate-600 w-32 flex-shrink-0">GA4:</span>
-                <span className="font-mono text-slate-900">{config.ga4_measurement_id}</span>
+                <span className="font-mono text-primary">{config.ga4_measurement_id}</span>
               </div>
             )}
             {config.conversion_action_id && (
               <div className="flex items-start gap-2">
                 <span className="text-slate-600 w-32 flex-shrink-0">转化操作:</span>
-                <span className="font-mono text-slate-900">{config.conversion_action_id}</span>
+                <span className="font-mono text-primary">{config.conversion_action_id}</span>
               </div>
             )}
             <div className="flex items-start gap-2">

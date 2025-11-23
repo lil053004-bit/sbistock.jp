@@ -18,10 +18,10 @@ export default function SpecifiedCommercialTransactionAct() {
             <div className="bg-blue-100 p-3 rounded-lg">
               <FileText className="w-6 h-6 text-blue-700" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">特定商取引法に基づく表記</h1>
+            <h1 className="text-3xl font-bold text-primary">特定商取引法に基づく表記</h1>
           </div>
 
-          <p className="text-gray-700 leading-relaxed mb-8">
+          <p className="text-primary leading-relaxed mb-8">
             特定商取引法（特定商取引に関する法律）に基づき、以下の通り表記いたします。
           </p>
 
@@ -32,26 +32,26 @@ export default function SpecifiedCommercialTransactionAct() {
                   <Building className="w-5 h-5 text-blue-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">販売業者情報</h2>
+                  <h2 className="text-xl font-bold text-primary mb-4">販売業者情報</h2>
                   <dl className="space-y-3">
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">販売業者名</dt>
-                      <dd className="sm:col-span-2 text-gray-700">アユダンテ株式会社<br />Ayudante, Inc.</dd>
+                      <dt className="font-semibold text-primary">販売業者名</dt>
+                      <dd className="sm:col-span-2 text-primary">アユダンテ株式会社<br />Ayudante, Inc.</dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">所在地</dt>
-                      <dd className="sm:col-span-2 text-gray-700">
+                      <dt className="font-semibold text-primary">所在地</dt>
+                      <dd className="sm:col-span-2 text-primary">
                          〒102-0083<br />
                          東京都千代田区麹町2-2-4 麹町セントラルビル6F
                       </dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">設立</dt>
-                      <dd className="sm:col-span-2 text-gray-700">2006年2月28日</dd>
+                      <dt className="font-semibold text-primary">設立</dt>
+                      <dd className="sm:col-span-2 text-primary">2006年2月28日</dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">業種</dt>
-                      <dd className="sm:col-span-2 text-gray-700">デジタルマーケティング／広告運用コンサルティング／データ分析</dd>
+                      <dt className="font-semibold text-primary">業種</dt>
+                      <dd className="sm:col-span-2 text-primary">デジタルマーケティング／広告運用コンサルティング／データ分析</dd>
                     </div>
                   </dl>
                 </div>
@@ -64,15 +64,15 @@ export default function SpecifiedCommercialTransactionAct() {
                   <Phone className="w-5 h-5 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">連絡先</h2>
+                  <h2 className="text-xl font-bold text-primary mb-4">連絡先</h2>
                   <dl className="space-y-3">
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">メールアドレス</dt>
+                      <dt className="font-semibold text-primary">メールアドレス</dt>
                       <dd className="sm:col-span-2 text-blue-600">support@sbistock.jp</dd>
                     </div>
                     <div className="grid sm:grid-cols-3 gap-2">
-                      <dt className="font-semibold text-gray-900">受付時間</dt>
-                      <dd className="sm:col-span-2 text-gray-700">平日 9:00 - 18:00（土日祝日、年末年始を除く）</dd>
+                      <dt className="font-semibold text-primary">受付時間</dt>
+                      <dd className="sm:col-span-2 text-primary">平日 9:00 - 18:00（土日祝日、年末年始を除く）</dd>
                     </div>
                   </dl>
                 </div>
@@ -80,10 +80,10 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">サービス内容</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">サービス内容</h2>
               <div className="bg-slate-50 rounded-lg p-5">
-                <h3 className="font-bold text-gray-900 mb-3">提供サービス</h3>
-                <ul className="space-y-2 text-gray-700">
+                <h3 className="font-bold text-primary mb-3">提供サービス</h3>
+                <ul className="space-y-2 text-primary">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">•</span>
                     <span>AI技術を活用した株式情報の提供および分析サービス</span>
@@ -105,13 +105,13 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">サービス料金</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">サービス料金</h2>
               <div className="bg-blue-50 rounded-lg p-5 border-2 border-blue-200">
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">基本サービス</h3>
-                      <p className="text-sm text-gray-700">
+                      <h3 className="font-bold text-primary mb-1">基本サービス</h3>
+                      <p className="text-sm text-primary">
                         株価情報の閲覧、AI診断機能、レポートダウンロード
                       </p>
                     </div>
@@ -120,7 +120,7 @@ export default function SpecifiedCommercialTransactionAct() {
                     </div>
                   </div>
                   <div className="bg-white rounded p-3">
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                    <p className="text-sm text-primary leading-relaxed">
                       現在、当サービスは基本機能を無料で提供しております。
                       今後、プレミアム機能を追加する場合は、事前にお知らせいたします。
                     </p>
@@ -130,13 +130,13 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">お支払い方法</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">お支払い方法</h2>
               <div className="bg-slate-50 rounded-lg p-5">
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-primary leading-relaxed">
                   現在、有料サービスは提供しておりません。
                   今後、有料プランを導入する際は、以下の決済方法を予定しております。
                 </p>
-                <ul className="mt-3 space-y-2 text-gray-700">
+                <ul className="mt-3 space-y-2 text-primary">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">•</span>
                     <span>クレジットカード決済（Visa、Mastercard、JCB、American Express等）</span>
@@ -154,9 +154,9 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">サービス提供時期</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">サービス提供時期</h2>
               <div className="bg-slate-50 rounded-lg p-5">
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-primary leading-relaxed">
                   サービスはお申し込み後、即時ご利用いただけます。
                   AI診断結果の生成には、通常数秒から数十秒程度のお時間をいただきます。
                 </p>
@@ -164,19 +164,19 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">返品・キャンセルについて</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">返品・キャンセルについて</h2>
               <div className="bg-slate-50 rounded-lg p-5">
-                <h3 className="font-bold text-gray-900 mb-3">無料サービスについて</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <h3 className="font-bold text-primary mb-3">無料サービスについて</h3>
+                <p className="text-primary leading-relaxed mb-4">
                   現在提供している無料サービスについては、
                   いつでもご利用を停止いただけます。
                 </p>
-                <h3 className="font-bold text-gray-900 mb-3">今後提供予定の有料サービスについて</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <h3 className="font-bold text-primary mb-3">今後提供予定の有料サービスについて</h3>
+                <p className="text-primary leading-relaxed">
                   デジタルコンテンツの性質上、原則として返品・返金はお受けできません。
                   ただし、以下の場合は返金対応を検討いたします。
                 </p>
-                <ul className="mt-3 space-y-2 text-gray-700">
+                <ul className="mt-3 space-y-2 text-primary">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">•</span>
                     <span>システムの不具合により、サービスが正常に提供されなかった場合</span>
@@ -190,9 +190,9 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">個人情報の取り扱い</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">個人情報の取り扱い</h2>
               <div className="bg-slate-50 rounded-lg p-5">
-                <p className="text-gray-700 leading-relaxed mb-3">
+                <p className="text-primary leading-relaxed mb-3">
                   お客様の個人情報は、個人情報保護法に基づき適切に管理いたします。
                   詳細は
                   <Link to="/privacy" className="text-blue-600 hover:underline font-semibold mx-1">
@@ -204,10 +204,10 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section className="border-b border-gray-200 pb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">免責事項</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">免責事項</h2>
               <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-lg">
                 <p className="text-amber-900 font-semibold mb-3">重要なお知らせ</p>
-                <div className="space-y-2 text-gray-700 text-sm leading-relaxed">
+                <div className="space-y-2 text-primary text-sm leading-relaxed">
                   <p>
                     当サービスは、AI技術を活用した株式情報の提供および分析ツールであり、
                     投資助言業務、投資一任業務、金融商品仲介業務には該当しません。
@@ -227,16 +227,16 @@ export default function SpecifiedCommercialTransactionAct() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">お問い合わせ</h2>
               <div className="bg-blue-50 rounded-lg p-6 border-2 border-blue-200">
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-primary leading-relaxed mb-4">
                   特定商取引法に関するご質問、その他お問い合わせは、
                   以下の方法でご連絡ください。
                 </p>
                 <div className="flex items-start gap-3 mb-4">
                   <Mail className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900 mb-1">メール</p>
+                    <p className="font-semibold text-primary mb-1">メール</p>
                     <p className="text-blue-600">support@sbistock.jp</p>
                     <p className="text-sm text-gray-600 mt-1">受付時間: 平日 9:00 - 18:00</p>
                   </div>

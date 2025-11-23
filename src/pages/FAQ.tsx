@@ -139,10 +139,10 @@ export default function FAQ() {
             <div className="bg-blue-100 p-3 rounded-lg">
               <HelpCircle className="w-6 h-6 text-blue-700" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">よくある質問（FAQ）</h1>
+            <h1 className="text-3xl font-bold text-primary">よくある質問（FAQ）</h1>
           </div>
 
-          <p className="text-gray-700 leading-relaxed mb-8">
+          <p className="text-primary leading-relaxed mb-8">
             AI株式診断サービスに関してよくお問い合わせいただく質問をまとめました。
             こちらで解決しない場合は、お問い合わせフォームよりご連絡ください。
           </p>
@@ -165,7 +165,7 @@ export default function FAQ() {
                           onClick={() => setOpenIndex(isOpen ? null : globalIndex)}
                           className="w-full px-4 py-3 flex items-start justify-between bg-gray-50 hover:bg-gray-100 transition-colors text-left"
                         >
-                          <span className="font-semibold text-gray-900 pr-4">{faq.q}</span>
+                          <span className="font-semibold text-primary pr-4">{faq.q}</span>
                           <ChevronDown
                             className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${
                               isOpen ? 'transform rotate-180' : ''
@@ -174,7 +174,7 @@ export default function FAQ() {
                         </button>
                         {isOpen && (
                           <div className="px-4 py-3 bg-white">
-                            <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+                            <p className="text-primary leading-relaxed">{faq.a}</p>
                           </div>
                         )}
                       </div>
@@ -186,8 +186,8 @@ export default function FAQ() {
           </div>
 
           <div className="bg-blue-50 rounded-lg p-6 mt-8">
-            <h3 className="font-bold text-gray-900 mb-3">お問い合わせ</h3>
-            <p className="text-sm text-gray-700 mb-3">
+            <h3 className="font-bold text-primary mb-3">お問い合わせ</h3>
+            <p className="text-sm text-primary mb-3">
               上記で解決しない質問やご不明な点がございましたら、お気軽にお問い合わせください。
             </p>
             <a

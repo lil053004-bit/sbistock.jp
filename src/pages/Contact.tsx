@@ -18,21 +18,21 @@ export default function Contact() {
             <div className="bg-blue-100 p-3 rounded-lg">
               <Mail className="w-6 h-6 text-blue-700" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">お問い合わせ</h1>
+            <h1 className="text-3xl font-bold text-primary">お問い合わせ</h1>
           </div>
 
           <div className="prose max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-8">
+            <p className="text-primary leading-relaxed mb-8">
               AI株式診断サービスをご利用いただき、誠にありがとうございます。
               ご質問、ご要望、不具合のご報告など、お気軽にお問い合わせください。
             </p>
 
             <section className="mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">受付時間</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">受付時間</h2>
               <div className="bg-blue-50 rounded-lg p-4 flex items-start gap-3">
                 <Clock className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="font-semibold text-gray-900 mb-1">平日 9:00 - 18:00</p>
+                  <p className="font-semibold text-primary mb-1">平日 9:00 - 18:00</p>
                   <p className="text-sm text-gray-600">
                     ※土日祝日、年末年始は休業とさせていただきます<br />
                     ※お問い合わせ内容により、回答までに数日かかる場合がございます
@@ -42,10 +42,10 @@ export default function Contact() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">お問い合わせフォーム</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">お問い合わせフォーム</h2>
               <form className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-primary mb-2">
                     お名前 <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -59,7 +59,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">
                     メールアドレス <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -73,7 +73,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-primary mb-2">
                     件名 <span className="text-red-600">*</span>
                   </label>
                   <select
@@ -93,7 +93,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">
                     お問い合わせ内容 <span className="text-red-600">*</span>
                   </label>
                   <textarea
@@ -113,7 +113,7 @@ export default function Contact() {
                       required
                       className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                     />
-                    <span className="text-sm text-gray-700">
+                    <span className="text-sm text-primary">
                       <a href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</a>
                       に同意します <span className="text-red-600">*</span>
                     </span>
@@ -137,8 +137,8 @@ export default function Contact() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">よくあるお問い合わせ</h2>
-              <p className="text-gray-700 leading-relaxed mb-3">
+              <h2 className="text-xl font-bold text-primary mb-4">よくあるお問い合わせ</h2>
+              <p className="text-primary leading-relaxed mb-3">
                 よくあるご質問については、
                 <a href="/faq" className="text-blue-600 hover:underline font-semibold">FAQ（よくある質問）</a>
                 のページもご参照ください。
@@ -146,7 +146,7 @@ export default function Contact() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">投資に関するご相談について</h2>
+              <h2 className="text-xl font-bold text-primary mb-4">投資に関するご相談について</h2>
               <div className="bg-red-50 border-l-4 border-red-500 p-4">
                 <p className="text-red-900 font-semibold mb-2">重要なお知らせ</p>
                 <p className="text-red-800 leading-relaxed">
@@ -157,28 +157,28 @@ export default function Contact() {
             </section>
 
             <div className="bg-slate-100 rounded-lg p-6">
-              <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <h3 className="font-bold text-primary mb-3 flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 運営会社情報
               </h3>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-primary mb-2">
                 <strong>会社名:</strong> アユダンテ株式会社（Ayudante, Inc.）
               </p>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-primary mb-2">
                 <strong>所在地:</strong><br />
                 〒102-0083<br />
                 東京都千代田区麹町2-2-4 麹町セントラルビル6F
               </p>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-primary mb-2">
                 <strong>設立:</strong> 2006年2月28日
               </p>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-primary mb-2">
                 <strong>業種:</strong> デジタルマーケティング／広告運用コンサルティング／データ分析
               </p>
-              <p className="text-sm text-gray-700 mb-2">
+              <p className="text-sm text-primary mb-2">
                 <strong>メールアドレス:</strong> support@sbistock.jp
               </p>
-              <p className="text-sm text-gray-700">
+              <p className="text-sm text-primary">
                 <strong>受付時間:</strong> 平日 9:00-18:00
               </p>
             </div>

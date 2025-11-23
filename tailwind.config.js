@@ -24,7 +24,8 @@ export default {
         'bg-gray-200': '#E5E7EB',
 
         // Text Colors
-        'text-dark': '#111827',
+        'text-primary': '#03142d',
+        'text-dark': '#03142d',
         'text-gray': '#6B7280',
         'text-light-gray': '#9CA3AF',
         'text-slate': '#475569',
@@ -57,9 +58,6 @@ export default {
         'gold-300': '#fcd34d',
         'accent-primary': '#3DD598',
         'accent-secondary': '#4ADE80',
-        'text-primary': '#111827',
-        'text-secondary': '#6b7280',
-        'text-tertiary': '#9ca3af',
       },
       backgroundImage: {
         'green-gradient': 'linear-gradient(135deg, #3DD598 0%, #4ADE80 50%, #3DD598 100%)',

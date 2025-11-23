@@ -146,7 +146,7 @@ export default function SessionsTab() {
       {/* Sessions List */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-bold text-slate-900">
+          <h3 className="text-lg font-bold text-primary">
             用户会话 ({filteredSessions.length})
           </h3>
         </div>
@@ -247,7 +247,7 @@ function SessionCard({ session, events, isExpanded, onToggle }: SessionCardProps
       {/* Session Timeline */}
       {isExpanded && (
         <div className="border-t border-slate-200 bg-slate-50 p-4">
-          <h4 className="font-semibold text-slate-900 mb-4">用户行为时间线</h4>
+          <h4 className="font-semibold text-primary mb-4">用户行为时间线</h4>
           <div className="space-y-3">
             {events.map((event, index) => (
               <EventItem key={event.id} event={event} isLast={index === events.length - 1} />
@@ -325,7 +325,7 @@ function EventItem({ event, isLast }: EventItemProps) {
       </div>
       <div className="flex-1 pb-4">
         <div className="flex items-center justify-between mb-1">
-          <h5 className="font-semibold text-slate-900">{getEventTitle(event.event_type)}</h5>
+          <h5 className="font-semibold text-primary">{getEventTitle(event.event_type)}</h5>
           <span className="text-xs text-slate-500">{formatTime(event.created_at)}</span>
         </div>
         <div className="text-sm text-slate-600 space-y-1">

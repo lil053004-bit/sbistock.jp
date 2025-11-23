@@ -172,7 +172,7 @@ export default function LineRedirectsTab() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900">LINE分流链接管理</h2>
+          <h2 className="text-2xl font-bold text-primary">LINE分流链接管理</h2>
           <p className="text-sm text-slate-600 mt-1">创建和管理多个LINE链接，系统将根据权重自动分配流量</p>
         </div>
         <button
@@ -187,10 +187,10 @@ export default function LineRedirectsTab() {
       {/* Add Form */}
       {showAddForm && (
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-          <h3 className="font-bold text-slate-900 mb-4">添加新的LINE链接</h3>
+          <h3 className="font-bold text-primary mb-4">添加新的LINE链接</h3>
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 LINE URL <span className="text-red-500">*</span>
               </label>
               <input
@@ -202,7 +202,7 @@ export default function LineRedirectsTab() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 权重 (1-100) <span className="text-red-500">*</span>
               </label>
               <input
@@ -238,7 +238,7 @@ export default function LineRedirectsTab() {
                   setShowAddForm(false);
                   setNewLink({ line_url: '', weight: 50 });
                 }}
-                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg font-medium transition"
+                className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-primary rounded-lg font-medium transition"
               >
                 取消
               </button>
@@ -251,7 +251,7 @@ export default function LineRedirectsTab() {
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-sm border border-blue-200 p-6">
         <div className="flex items-center gap-2 mb-3">
           <BarChart3 className="w-5 h-5 text-blue-600" />
-          <h3 className="font-bold text-slate-900">权重分布</h3>
+          <h3 className="font-bold text-primary">权重分布</h3>
         </div>
         <div className="text-2xl font-bold text-blue-600 mb-2">总权重: {totalWeight}</div>
         <p className="text-sm text-slate-600">
@@ -279,7 +279,7 @@ export default function LineRedirectsTab() {
                 <div className="p-6">
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">LINE URL</label>
+                      <label className="block text-sm font-medium text-primary mb-2">LINE URL</label>
                       <input
                         type="text"
                         value={editForm.line_url}
@@ -288,7 +288,7 @@ export default function LineRedirectsTab() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">权重</label>
+                      <label className="block text-sm font-medium text-primary mb-2">权重</label>
                       <input
                         type="number"
                         min="1"
@@ -308,7 +308,7 @@ export default function LineRedirectsTab() {
                       </button>
                       <button
                         onClick={() => setEditingId(null)}
-                        className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg font-medium transition"
+                        className="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-primary rounded-lg font-medium transition"
                       >
                         取消
                       </button>
@@ -331,11 +331,11 @@ export default function LineRedirectsTab() {
                       <div className="flex items-center gap-4 text-sm text-slate-600 ml-8">
                         <div>
                           <span className="font-medium">权重:</span>{' '}
-                          <span className="font-bold text-slate-900">{link.weight}</span>
+                          <span className="font-bold text-primary">{link.weight}</span>
                         </div>
                         <div>
                           <span className="font-medium">命中次数:</span>{' '}
-                          <span className="font-bold text-slate-900">{link.hit_count}</span>
+                          <span className="font-bold text-primary">{link.hit_count}</span>
                         </div>
                         {totalWeight > 0 && link.is_active && (
                           <div>

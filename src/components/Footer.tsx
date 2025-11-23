@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-6">
         {/* Legal Documents */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-dark">
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-primary">
           <FileText className="w-4 h-4" />
           法的文書
           </h4>
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-text-dark">
+          <h4 className="font-bold mb-3 flex items-center gap-2 text-sm text-primary">
           <Mail className="w-4 h-4" />
           お問い合わせ
           </h4>

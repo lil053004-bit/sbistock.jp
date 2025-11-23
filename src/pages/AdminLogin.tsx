@@ -34,7 +34,7 @@ export default function AdminLogin() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-900 rounded-full mb-4">
               <Lock className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">广告管理后台</h1>
+            <h1 className="text-2xl font-bold text-primary">广告管理后台</h1>
             <p className="text-slate-600 mt-2">请登录以访问管理系统</p>
           </div>
 
@@ -47,7 +47,7 @@ export default function AdminLogin() {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 用户名
               </label>
               <div className="relative">
@@ -56,7 +56,7 @@ export default function AdminLogin() {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-slate-900"
+                  className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-primary"
                   placeholder="请输入用户名"
                   required
                   autoComplete="username"
@@ -65,7 +65,7 @@ export default function AdminLogin() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label className="block text-sm font-medium text-primary mb-2">
                 密码
               </label>
               <div className="relative">
@@ -74,7 +74,7 @@ export default function AdminLogin() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-slate-900"
+                  className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-primary"
                   placeholder="请输入密码"
                   required
                   autoComplete="current-password"

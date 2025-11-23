@@ -43,14 +43,14 @@ const formatAnalysisText = (text: string): JSX.Element[] => {
 
     if (isBold) {
       return (
-        <div key={index} className="font-bold text-gray-900 mt-4 mb-2">
+        <div key={index} className="font-bold text-primary mt-4 mb-2">
           {parts}
         </div>
       );
     }
 
     return (
-      <div key={index} className="text-gray-700">
+      <div key={index} className="text-primary">
         {parts}
       </div>
     );
@@ -128,7 +128,7 @@ export default function NewDiagnosisModal({
 
             <div className="relative space-y-2 sm:space-y-3">
               <div className="bg-white rounded-lg p-3 sm:p-4 border-2 border-navy-600/20 backdrop-blur-sm shadow-lg">
-                <div className="text-xs sm:text-sm text-gray-700 leading-relaxed space-y-2">
+                <div className="text-xs sm:text-sm text-primary leading-relaxed space-y-2">
                   {isConnecting ? (
                     <div className="text-center py-4">
                       <p className="text-navy-600 font-bold">市場データ分析中...</p>

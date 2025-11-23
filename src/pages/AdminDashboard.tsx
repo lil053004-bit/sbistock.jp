@@ -99,13 +99,13 @@ export default function AdminDashboard() {
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-slate-900">广告管理后台</h1>
+                <h1 className="text-xl font-bold text-primary">广告管理后台</h1>
                 <p className="text-sm text-slate-600">用户行为分析与API监控</p>
               </div>
             </div>
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 px-4 py-2 text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition"
+              className="flex items-center gap-2 px-4 py-2 text-primary hover:text-primary hover:bg-slate-100 rounded-lg transition"
             >
               <LogOut className="w-4 h-4" />
               <span>退出登录</span>
@@ -122,8 +122,8 @@ export default function AdminDashboard() {
               onClick={() => setActiveTab('overview')}
               className={`px-6 py-3 font-medium border-b-2 transition ${
                 activeTab === 'overview'
-                  ? 'border-slate-900 text-slate-900'
-                  : 'border-transparent text-slate-600 hover:text-slate-900'
+                  ? 'border-slate-900 text-primary'
+                  : 'border-transparent text-slate-600 hover:text-primary'
               }`}
             >
               <div className="flex items-center gap-2">
@@ -135,8 +135,8 @@ export default function AdminDashboard() {
               onClick={() => setActiveTab('sessions')}
               className={`px-6 py-3 font-medium border-b-2 transition ${
                 activeTab === 'sessions'
-                  ? 'border-slate-900 text-slate-900'
-                  : 'border-transparent text-slate-600 hover:text-slate-900'
+                  ? 'border-slate-900 text-primary'
+                  : 'border-transparent text-slate-600 hover:text-primary'
               }`}
             >
               <div className="flex items-center gap-2">
@@ -148,8 +148,8 @@ export default function AdminDashboard() {
               onClick={() => setActiveTab('line-redirects')}
               className={`px-6 py-3 font-medium border-b-2 transition ${
                 activeTab === 'line-redirects'
-                  ? 'border-slate-900 text-slate-900'
-                  : 'border-transparent text-slate-600 hover:text-slate-900'
+                  ? 'border-slate-900 text-primary'
+                  : 'border-transparent text-slate-600 hover:text-primary'
               }`}
             >
               <div className="flex items-center gap-2">
@@ -161,8 +161,8 @@ export default function AdminDashboard() {
               onClick={() => setActiveTab('google-tracking')}
               className={`px-6 py-3 font-medium border-b-2 transition ${
                 activeTab === 'google-tracking'
-                  ? 'border-slate-900 text-slate-900'
-                  : 'border-transparent text-slate-600 hover:text-slate-900'
+                  ? 'border-slate-900 text-primary'
+                  : 'border-transparent text-slate-600 hover:text-primary'
               }`}
             >
               <div className="flex items-center gap-2">
@@ -200,7 +200,7 @@ function OverviewTab({ stats, apiStats }: { stats: Stats | null; apiStats: ApiSt
     <div className="space-y-6">
       {/* User Activity Stats */}
       <div>
-        <h2 className="text-lg font-bold text-slate-900 mb-4">用户活动统计 (最近7天)</h2>
+        <h2 className="text-lg font-bold text-primary mb-4">用户活动统计 (最近7天)</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           <StatCard
             icon={<Users className="w-6 h-6" />}
@@ -237,7 +237,7 @@ function OverviewTab({ stats, apiStats }: { stats: Stats | null; apiStats: ApiSt
 
       {/* API Usage Stats */}
       <div>
-        <h2 className="text-lg font-bold text-slate-900 mb-4">API使用统计 (最近24小时)</h2>
+        <h2 className="text-lg font-bold text-primary mb-4">API使用统计 (最近24小时)</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
             icon={<Activity className="w-6 h-6" />}
@@ -268,7 +268,7 @@ function OverviewTab({ stats, apiStats }: { stats: Stats | null; apiStats: ApiSt
 
       {/* Conversion Funnel */}
       <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-        <h3 className="text-lg font-bold text-slate-900 mb-4">转化漏斗</h3>
+        <h3 className="text-lg font-bold text-primary mb-4">转化漏斗</h3>
         <div className="space-y-3">
           <FunnelStep
             label="页面访问"
@@ -316,7 +316,7 @@ function StatCard({ icon, label, value, color }: StatCardProps) {
       <div className={`inline-flex p-3 rounded-lg ${colorClasses[color]} mb-3`}>
         {icon}
       </div>
-      <p className="text-2xl font-bold text-slate-900">{value}</p>
+      <p className="text-2xl font-bold text-primary">{value}</p>
       <p className="text-sm text-slate-600 mt-1">{label}</p>
     </div>
   );
@@ -341,8 +341,8 @@ function FunnelStep({ label, value, total, color }: FunnelStepProps) {
   return (
     <div>
       <div className="flex items-center justify-between mb-2">
-        <span className="text-sm font-medium text-slate-700">{label}</span>
-        <span className="text-sm font-bold text-slate-900">
+        <span className="text-sm font-medium text-primary">{label}</span>
+        <span className="text-sm font-bold text-primary">
           {value} ({percentage.toFixed(1)}%)
         </span>
       </div>
