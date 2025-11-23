@@ -45,7 +45,7 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
       <div
         className="rounded-2xl p-4"
         style={{
-          border: '2px solid rgba(255, 255, 255, 0.3)',
+          border: '2px dashed #03142d',
           backdropFilter: 'blur(8px)',
           backgroundColor: 'transparent'
         }}
@@ -56,7 +56,7 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
           </div>
         </div>
 
-        <div className="rounded-xl p-3 text-center" style={{ border: '2px solid rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(5px)' }}>
+        <div className="rounded-xl p-3 text-center" style={{ border: '2px dashed #03142d', backdropFilter: 'blur(5px)' }}>
           <div className="text-sm text-primary">
             前日比：<span className={`font-bold ${changeColor}`}>{formatChange(price.change, price.changePercent)}</span>
           </div>
