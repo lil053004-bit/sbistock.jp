@@ -79,7 +79,7 @@ export default function Footer() {
           <li className="text-text-gray">
             support@sbistock.jp
           </li>
-          <li className="text-xs text-white">
+          <li className="text-xs text-primary">
             受付時間: 平日 9:00-18:00
           </li>
           </ul>
@@ -89,10 +89,10 @@ export default function Footer() {
 
         {/* Copyright Section */}
         <div className="border-t border-gold-400/20 pt-4 text-center">
-        <p className="text-xs sm:text-sm mb-2 font-medium text-white">
+        <p className="text-xs sm:text-sm mb-2 font-medium text-primary">
           &copy; {currentYear} アユダンテ株式会社（Ayudante, Inc.）. All rights reserved.
         </p>
-        <p className="text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto text-white">
+        <p className="text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto text-primary">
           当サイトで提供される情報は投資勧誘を目的としたものではありません。
           投資に関する最終決定は、利用者ご自身の判断でなさるようお願いいたします。
           掲載されている情報の正確性については万全を期しておりますが、その内容の正確性、安全性、有用性を保証するものではありません。

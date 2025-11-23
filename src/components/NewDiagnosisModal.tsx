@@ -107,7 +107,7 @@ export default function NewDiagnosisModal({
         <div className="relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden border-4 border-gold-400 pt-4 sm:pt-6">
           <div className="relative sticky top-0 bg-gradient-to-r from-navy-700 to-navy-600 px-3 py-2 sm:px-5 sm:py-3 flex items-center justify-between border-b-4 border-gold-500 backdrop-blur-sm z-10 shadow-lg">
           <div className="flex-1 text-center pr-8">
-            <h2 className="text-base sm:text-lg md:text-xl font-bold text-white drop-shadow-lg">
+            <h2 className="text-base sm:text-lg md:text-xl font-bold text-primary drop-shadow-lg">
               {stockName}（{stockCode}）AI市場分析レポート（参考資料）
             </h2>
           </div>
@@ -116,7 +116,7 @@ export default function NewDiagnosisModal({
             className="p-1 sm:p-2 hover:bg-white/30 rounded-lg transition-colors backdrop-blur-sm hover:shadow-lg"
             aria-label="閉じる"
           >
-            <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           </button>
         </div>
 
@@ -148,7 +148,7 @@ export default function NewDiagnosisModal({
                 <>
                   <button
                     onClick={onLineConversion}
-                    className="relative overflow-hidden w-full bg-gradient-to-r from-success to-emerald-600 text-white font-bold py-4 px-6 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-card-md hover:shadow-card-lg flex items-center justify-center gap-3 text-sm mt-6 group"
+                    className="relative overflow-hidden w-full bg-gradient-to-r from-success to-emerald-600 text-primary font-bold py-4 px-6 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all shadow-card-md hover:shadow-card-lg flex items-center justify-center gap-3 text-sm mt-6 group"
                     style={{ willChange: 'transform' }}
                   >
                     <div

@@ -32,7 +32,7 @@ export default function AdminLogin() {
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-900 rounded-full mb-4">
-              <Lock className="w-8 h-8 text-white" />
+              <Lock className="w-8 h-8 text-primary" />
             </div>
             <h1 className="text-2xl font-bold text-primary">广告管理后台</h1>
             <p className="text-slate-600 mt-2">请登录以访问管理系统</p>
@@ -85,7 +85,7 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-slate-900 text-primary py-3 rounded-lg font-medium hover:bg-slate-800 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? '登录中...' : '登录'}
             </button>

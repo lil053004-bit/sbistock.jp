@@ -9,7 +9,7 @@ export default function AITrustSection() {
             <Shield className="w-4 h-4 text-accent-gold" />
 <span className="text-accent-gold text-sm font-bold">公開市場データの表示ツール</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl font-black text-primary mb-3">
             銘柄情報表示ツール
           </h2>
           <p className="text-gray-400 text-lg">
@@ -24,9 +24,9 @@ export default function AITrustSection() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
             <div className="flex-1 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-full flex items-center justify-center mx-auto mb-3 shadow-gold-glow">
-                <Database className="w-8 h-8 text-white" />
+                <Database className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-white text-lg font-bold mb-2">データ取得</h3>
+              <h3 className="text-primary text-lg font-bold mb-2">データ取得</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 公開市場データの取得
               </p>
@@ -47,9 +47,9 @@ export default function AITrustSection() {
 
             <div className="flex-1 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-full flex items-center justify-center mx-auto mb-3 shadow-gold-glow">
-                <Cpu className="w-8 h-8 text-white" />
+                <Cpu className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-white text-lg font-bold mb-2">情報整理</h3>
+              <h3 className="text-primary text-lg font-bold mb-2">情報整理</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 データの整理と表示
               </p>
@@ -70,9 +70,9 @@ export default function AITrustSection() {
 
             <div className="flex-1 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-gold rounded-full flex items-center justify-center mx-auto mb-3 shadow-gold-glow">
-                <LineChart className="w-8 h-8 text-white" />
+                <LineChart className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-white text-lg font-bold mb-2">情報表示</h3>
+              <h3 className="text-primary text-lg font-bold mb-2">情報表示</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
                 読みやすい形式で表示
               </p>
@@ -85,7 +85,7 @@ export default function AITrustSection() {
             <div className="flex items-center gap-3">
               <CheckCircle className="w-8 h-8 text-trust-green" />
               <div>
-                <div className="text-white font-bold text-sm">データ表示</div>
+                <div className="text-primary font-bold text-sm">データ表示</div>
                 <div className="text-gray-400 text-xs">市場データの表示</div>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function AITrustSection() {
             <div className="flex items-center gap-3">
               <CheckCircle className="w-8 h-8 text-tech-cyan" />
               <div>
-                <div className="text-white font-bold text-sm">学習ツール</div>
+                <div className="text-primary font-bold text-sm">学習ツール</div>
                 <div className="text-gray-400 text-xs">教育目的のツール</div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function AITrustSection() {
             <div className="flex items-center gap-3">
               <CheckCircle className="w-8 h-8 text-accent-gold" />
               <div>
-                <div className="text-white font-bold text-sm">情報整理</div>
+                <div className="text-primary font-bold text-sm">情報整理</div>
                 <div className="text-gray-400 text-xs">データの整理表示</div>
               </div>
             </div>

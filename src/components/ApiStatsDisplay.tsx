@@ -55,7 +55,7 @@ export default function ApiStatsDisplay() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-gradient-to-br from-accent-red to-accent-red-dark text-white p-2.5 rounded-full shadow-red-glow hover:shadow-red-glow-lg transition-all hover:scale-110"
+          className="bg-gradient-to-br from-accent-red to-accent-red-dark text-primary p-2.5 rounded-full shadow-red-glow hover:shadow-red-glow-lg transition-all hover:scale-110"
           title="API統計を表示"
         >
           <Activity className="w-5 h-5" />
@@ -63,7 +63,7 @@ export default function ApiStatsDisplay() {
       ) : (
         <div className="bg-dark-secondary rounded-xl shadow-red-glow-lg p-3 w-72 border-2 border-accent-red/30">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-bold text-white flex items-center gap-2">
+            <h3 className="font-bold text-primary flex items-center gap-2">
               <Activity className="w-5 h-5 text-accent-red" />
               API統計
             </h3>
@@ -92,7 +92,7 @@ export default function ApiStatsDisplay() {
                 <Zap className="w-4 h-4 text-accent-red" />
                 <span className="text-sm font-semibold text-gray-300">今日のAPI使用</span>
               </div>
-              <div className="text-2xl font-bold text-white">
+              <div className="text-2xl font-bold text-primary">
                 {stats.rateLimit.rpd.current} / {stats.rateLimit.rpd.limit}
               </div>
               <div className="w-full bg-dark-primary rounded-full h-2 mt-2">
@@ -111,7 +111,7 @@ export default function ApiStatsDisplay() {
                 <TrendingUp className="w-4 h-4 text-yellow-400" />
                 <span className="text-sm font-semibold text-gray-300">分あたりレート</span>
               </div>
-              <div className="text-2xl font-bold text-white">
+              <div className="text-2xl font-bold text-primary">
                 {stats.rateLimit.rpm.current} / {stats.rateLimit.rpm.limit}
               </div>
               <div className="text-xs text-gray-400 mt-1">現在の使用状況</div>

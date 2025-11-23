@@ -96,7 +96,7 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="bg-slate-900 p-2 rounded-lg">
-                <BarChart3 className="w-6 h-6 text-white" />
+                <BarChart3 className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-primary">广告管理后台</h1>

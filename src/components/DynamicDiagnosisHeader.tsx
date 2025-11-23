@@ -8,7 +8,7 @@ export default function DynamicDiagnosisHeader({ stockName, stockCode }: Dynamic
     <div className="px-4 py-6">
       <div className="max-w-lg mx-auto">
         <div className="flex items-center justify-center mb-3">
-          <h2 className="text-white text-xl font-bold text-center">
+          <h2 className="text-primary text-xl font-bold text-center">
             株|{stockCode} {stockName}診断開始
           </h2>
         </div>

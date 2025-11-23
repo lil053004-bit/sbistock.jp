@@ -51,13 +51,13 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
         }}
       >
         <div className="flex justify-center mb-3">
-          <div className="bg-gradient-to-r from-green-primary to-green-light text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
+          <div className="bg-gradient-to-r from-green-primary to-green-light text-primary px-6 py-1.5 rounded-full text-sm font-bold shadow-md">
             株-{price.code || stockName} {price.date}
           </div>
         </div>
 
         <div className="rounded-xl p-3 text-center" style={{ border: '2px solid rgba(255, 255, 255, 0.25)', backdropFilter: 'blur(5px)' }}>
-          <div className="text-sm text-white">
+          <div className="text-sm text-primary">
             前日比：<span className={`font-bold ${changeColor}`}>{formatChange(price.change, price.changePercent)}</span>
           </div>
         </div>
@@ -77,10 +77,10 @@ export default function ScrollingHistoryData({ prices, stockName }: ScrollingHis
         </div>
 
         <div className="mt-3 text-center">
-          <p className="text-xs text-white">
+          <p className="text-xs text-primary">
             データ出典: 公開市場情報 | 更新: 準リアルタイム
           </p>
-          <p className="text-xs text-white mt-1">
+          <p className="text-xs text-primary mt-1">
             ※過去のデータは将来の結果を保証するものではありません
           </p>
         </div>

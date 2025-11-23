@@ -348,7 +348,7 @@ export default function NewHome() {
         {loading && (
           <div className="text-center py-12 md:py-16">
             <div className="inline-block animate-spin rounded-full h-12 w-12 sm:h-16 sm:w-16 border-4 border-accent-gold border-t-white"></div>
-            <p className="mt-4 text-white font-medium text-sm sm:text-base">株価データを読み込んでいます...</p>
+            <p className="mt-4 text-primary font-medium text-sm sm:text-base">株価データを読み込んでいます...</p>
           </div>
         )}
 
@@ -398,7 +398,7 @@ export default function NewHome() {
                   setDiagnosisState('initial');
                   setError(null);
                 }}
-                className="relative overflow-hidden px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-lg hover:from-blue-500 hover:to-blue-400 transition-all shadow-blue-glow text-sm sm:text-base touch-manipulation min-h-[44px] animate-shake-subtle animate-glow-ring-blue group"
+                className="relative overflow-hidden px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-primary font-bold rounded-lg hover:from-blue-500 hover:to-blue-400 transition-all shadow-blue-glow text-sm sm:text-base touch-manipulation min-h-[44px] animate-shake-subtle animate-glow-ring-blue group"
                 style={{ willChange: 'transform' }}
               >
                 <div

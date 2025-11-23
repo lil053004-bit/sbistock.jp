@@ -37,7 +37,8 @@
   }
 
   body {
-    @apply text-neutral-100 min-h-screen;
+    @apply min-h-screen;
+    color: #03142d;
     overflow-x: hidden;
     font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
     -webkit-font-smoothing: antialiased;
