@@ -37,7 +37,9 @@ export const adminAuth = {
 
       return { success: false, error: data.error || '登录失败' };
     } catch (error) {
-      console.error('Login error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Login error:', error);
+      }
       return { success: false, error: error instanceof Error ? error.message : '登录失败,请重试' };
     }
   },
@@ -46,7 +48,9 @@ export const adminAuth = {
     try {
       await apiClient.post('/api/admin/logout', {});
     } catch (error) {
-      console.error('Logout error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Logout error:', error);
+      }
     } finally {
       clearAuthToken();
     }

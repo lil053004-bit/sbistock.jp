@@ -65,7 +65,9 @@ export const userTracking = {
         gclid: params.urlParams.gclid
       });
     } catch (error) {
-      console.error('Tracking error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Tracking error:', error);
+      }
     }
   },
 
@@ -86,7 +88,9 @@ export const userTracking = {
         durationMs: params.durationMs
       });
     } catch (error) {
-      console.error('Tracking error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Tracking error:', error);
+      }
     }
   },
 
@@ -104,7 +108,9 @@ export const userTracking = {
         gclid: params.gclid
       });
     } catch (error) {
-      console.error('Tracking error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Tracking error:', error);
+      }
     }
   },
 
@@ -118,7 +124,9 @@ export const userTracking = {
         eventData: params.eventData
       });
     } catch (error) {
-      console.error('Tracking error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Tracking error:', error);
+      }
     }
   },
 

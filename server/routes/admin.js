@@ -3,10 +3,11 @@ import bcrypt from 'bcryptjs';
 import db from '../database/db.js';
 import { generateToken, authMiddleware } from '../middleware/auth.js';
 import { getSessionSummary, getPopularStocks } from '../database/helpers.js';
+import { loginRateLimiter, resetLoginAttempts } from '../middleware/loginRateLimiter.js';
 
 const router = express.Router();
 
-router.post('/login', async (req, res) => {
+router.post('/login', loginRateLimiter, async (req, res) => {
   try {
     const { username, password } = req.body;
 
@@ -31,6 +32,10 @@ router.post('/login', async (req, res) => {
     updateStmt.run(new Date().toISOString(), user.id);
 
     const token = generateToken(user.id, user.username);
+
+    if (res.locals.loginIdentifier) {
+      resetLoginAttempts(res.locals.loginIdentifier);
+    }
 
     res.json({
       success: true,

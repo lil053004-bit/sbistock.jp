@@ -18,7 +18,7 @@ export default function AdminLogin() {
     const result = await adminAuth.login(username, password);
 
     if (result.success) {
-      navigate('/adsadmin/dashboard');
+      navigate('/admin-secure-panel/dashboard');
     } else {
       setError(result.error || '登录失败');
     }

@@ -28,7 +28,9 @@ export async function initializeGoogleTracking(): Promise<void> {
     const data = await response.json();
 
     if (!data.success || !data.config || !data.config.is_enabled) {
-      console.log('[Google Tracking] Tracking is disabled or not configured');
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Tracking is disabled or not configured');
+      }
       return;
     }
 
@@ -36,24 +38,32 @@ export async function initializeGoogleTracking(): Promise<void> {
 
     if (currentConfig?.ga4_measurement_id) {
       await loadGA4Script(currentConfig.ga4_measurement_id);
-      console.log('[Google Tracking] GA4 initialized:', currentConfig.ga4_measurement_id);
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] GA4 initialized:', currentConfig.ga4_measurement_id);
+      }
     }
 
     if (currentConfig?.google_ads_conversion_id) {
       await loadGoogleAdsScript(currentConfig.google_ads_conversion_id);
-      console.log('[Google Tracking] Google Ads initialized:', currentConfig.google_ads_conversion_id);
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Google Ads initialized:', currentConfig.google_ads_conversion_id);
+      }
     }
 
     isInitialized = true;
   } catch (error) {
-    console.error('[Google Tracking] Failed to initialize:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to initialize:', error);
+    }
   }
 }
 
 function loadGA4Script(measurementId: string): Promise<void> {
   return new Promise((resolve, reject) => {
     if (!measurementId || !/^(G|AW|DC)-[A-Z0-9]+$/.test(measurementId)) {
-      console.error('[Google Tracking] Invalid measurement ID format');
+      if (import.meta.env.DEV) {
+        console.error('[Google Tracking] Invalid measurement ID format');
+      }
       reject(new Error('Invalid measurement ID'));
       return;
     }
@@ -74,7 +84,9 @@ function loadGA4Script(measurementId: string): Promise<void> {
     };
 
     script.onerror = () => {
-      console.error('[Google Tracking] Failed to load GA4 script');
+      if (import.meta.env.DEV) {
+        console.error('[Google Tracking] Failed to load GA4 script');
+      }
       reject(new Error('Failed to load script'));
     };
 
@@ -85,7 +97,9 @@ function loadGA4Script(measurementId: string): Promise<void> {
 function loadGoogleAdsScript(conversionId: string): Promise<void> {
   return new Promise((resolve, reject) => {
     if (!conversionId || !/^(AW|DC)-[A-Z0-9]+$/.test(conversionId)) {
-      console.error('[Google Tracking] Invalid conversion ID format');
+      if (import.meta.env.DEV) {
+        console.error('[Google Tracking] Invalid conversion ID format');
+      }
       reject(new Error('Invalid conversion ID'));
       return;
     }
@@ -107,7 +121,9 @@ function loadGoogleAdsScript(conversionId: string): Promise<void> {
       };
 
       script.onerror = () => {
-        console.error('[Google Tracking] Failed to load Google Ads script');
+        if (import.meta.env.DEV) {
+          console.error('[Google Tracking] Failed to load Google Ads script');
+        }
         reject(new Error('Failed to load script'));
       };
 
@@ -121,7 +137,9 @@ function loadGoogleAdsScript(conversionId: string): Promise<void> {
 
 export function trackConversion(): void {
   if (!isInitialized || !currentConfig) {
-    console.warn('[Google Tracking] Tracking not initialized');
+    if (import.meta.env.DEV) {
+      console.warn('[Google Tracking] Tracking not initialized');
+    }
     return;
   }
 
@@ -130,7 +148,9 @@ export function trackConversion(): void {
       window.gtag('event', 'conversion', {
         send_to: currentConfig.conversion_action_id,
       });
-      console.log('[Google Tracking] Conversion tracked:', currentConfig.conversion_action_id);
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Conversion tracked:', currentConfig.conversion_action_id);
+      }
     }
 
     if (currentConfig.ga4_measurement_id && window.gtag) {
@@ -138,10 +158,14 @@ export function trackConversion(): void {
         event_category: 'engagement',
         event_label: 'LINE CTA Click',
       });
-      console.log('[Google Tracking] GA4 event tracked: line_conversion');
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] GA4 event tracked: line_conversion');
+      }
     }
   } catch (error) {
-    console.error('[Google Tracking] Failed to track conversion:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to track conversion:', error);
+    }
   }
 }
 
@@ -155,10 +179,14 @@ export function trackPageView(pagePath?: string): void {
       window.gtag('config', currentConfig.ga4_measurement_id, {
         page_path: pagePath || window.location.pathname,
       });
-      console.log('[Google Tracking] Page view tracked:', pagePath || window.location.pathname);
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Page view tracked:', pagePath || window.location.pathname);
+      }
     }
   } catch (error) {
-    console.error('[Google Tracking] Failed to track page view:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to track page view:', error);
+    }
   }
 }
 
@@ -169,9 +197,13 @@ export function trackEvent(eventName: string, parameters?: Record<string, any>):
 
   try {
     window.gtag('event', eventName, parameters);
-    console.log('[Google Tracking] Event tracked:', eventName, parameters);
+    if (import.meta.env.DEV) {
+      console.log('[Google Tracking] Event tracked:', eventName, parameters);
+    }
   } catch (error) {
-    console.error('[Google Tracking] Failed to track event:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to track event:', error);
+    }
   }
 }
 
@@ -180,7 +212,9 @@ function canFireEvent(eventName: string): boolean {
   const lastFired = eventLastFired[eventName] || 0;
 
   if (now - lastFired < EVENT_COOLDOWN_MS) {
-    console.log(`[Google Tracking] Event "${eventName}" blocked - cooldown active`);
+    if (import.meta.env.DEV) {
+      console.log(`[Google Tracking] Event "${eventName}" blocked - cooldown active`);
+    }
     return false;
   }
 
@@ -190,7 +224,9 @@ function canFireEvent(eventName: string): boolean {
 
 export function trackDiagnosisClick(): void {
   if (!isInitialized || !currentConfig) {
-    console.log('[Google Tracking] Tracking not initialized - Bdd event skipped');
+    if (import.meta.env.DEV) {
+      console.log('[Google Tracking] Tracking not initialized - Bdd event skipped');
+    }
     return;
   }
 
@@ -201,16 +237,22 @@ export function trackDiagnosisClick(): void {
   try {
     if (window.gtag) {
       window.gtag('event', 'Bdd');
-      console.log('[Google Tracking] Bdd event tracked');
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Bdd event tracked');
+      }
     }
   } catch (error) {
-    console.error('[Google Tracking] Failed to track Bdd event:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to track Bdd event:', error);
+    }
   }
 }
 
 export function trackConversionClick(): void {
   if (!isInitialized || !currentConfig) {
-    console.log('[Google Tracking] Tracking not initialized - Add event skipped');
+    if (import.meta.env.DEV) {
+      console.log('[Google Tracking] Tracking not initialized - Add event skipped');
+    }
     return;
   }
 
@@ -221,16 +263,22 @@ export function trackConversionClick(): void {
   try {
     if (window.gtag) {
       window.gtag('event', 'Add');
-      console.log('[Google Tracking] Add event tracked');
+      if (import.meta.env.DEV) {
+        console.log('[Google Tracking] Add event tracked');
+      }
 
       if (currentConfig.conversion_action_id) {
         window.gtag('event', 'conversion', {
           send_to: currentConfig.conversion_action_id,
         });
-        console.log('[Google Tracking] Conversion event tracked:', currentConfig.conversion_action_id);
+        if (import.meta.env.DEV) {
+          console.log('[Google Tracking] Conversion event tracked:', currentConfig.conversion_action_id);
+        }
       }
     }
   } catch (error) {
-    console.error('[Google Tracking] Failed to track Add/conversion event:', error);
+    if (import.meta.env.DEV) {
+      console.error('[Google Tracking] Failed to track Add/conversion event:', error);
+    }
   }
 }

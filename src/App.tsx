@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
-import ParticleBackground from './components/ParticleBackground';
 import ModernBackground from './components/ModernBackground';
 import ProtectedRoute from './components/ProtectedRoute';
 import NewHome from './pages/NewHome';
@@ -22,7 +21,6 @@ function App() {
 
   return (
     <ModernBackground>
-      <ParticleBackground />
       <div className="relative z-10">
         <Routes>
           <Route path="/" element={<NewHome />} />
@@ -34,9 +32,9 @@ function App() {
           <Route path="/specified-commercial-transaction-act" element={<SpecifiedCommercialTransactionAct />} />
 
           {/* Admin Routes */}
-          <Route path="/adsadmin" element={<AdminLogin />} />
+          <Route path="/admin-secure-panel" element={<AdminLogin />} />
           <Route
-            path="/adsadmin/dashboard"
+            path="/admin-secure-panel/dashboard"
             element={
               <ProtectedRoute>
                 <AdminDashboard />
